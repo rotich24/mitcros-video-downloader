@@ -1,0 +1,19 @@
+MITCROS DOWNLOADER UPGRADE (Android)
+
+Files in this package replace:
+- pubspec.yaml
+- lib/main.dart
+- .github/workflows/main.yml
+
+In GitHub on your phone:
+1. Open rotich24/mitcros-video-downloader on branch main.
+2. Open each path above, tap Edit (pencil), select all old text, paste the matching replacement file, and Commit changes.
+3. For the workflow, path is .github/workflows/main.yml (not main.dart).
+4. Each commit may trigger a build. After all three replacements, open Actions and inspect the latest run.
+5. If Build release APK succeeds, open that run, scroll to Artifacts, and download mitcros-downloader-apk.
+
+Notes:
+- Extractor uses yt-dlp locally on Android; first initialization needs internet and may download engine components.
+- Downloads are stored in the app's application Documents/Downloads folder. This is local phone storage, but not the shared public /Download folder.
+- Some platforms, private/login-protected media, DRM-protected streams, and some YouTube videos may fail.
+- Review the extractor/youtubedl-android licensing before distributing the APK.
